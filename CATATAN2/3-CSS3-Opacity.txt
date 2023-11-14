@@ -1,0 +1,17 @@
+Opacity
+    -> digunakan untuk mengatur transparansi suatu elemen
+
+
+    * nilai opacity dari 0 - 1 *
+
+    nol di depan bisa ditulis tanpa nol 
+
+    0.25 bisa ditulis .25 saja
+
+
+    div {
+        width: 300px;
+        height: 300px;
+        background-color: #f60; -> aslinya #ff6600, ada yang sama bisa ditulis satu
+        opacity: .8;
+    }

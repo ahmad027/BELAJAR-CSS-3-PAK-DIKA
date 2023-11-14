@@ -39,3 +39,28 @@ yang sering dipakai
     opacity 
     RGBa & HSLa 
     box-sizing 
+    box-shadow
+    text-shadow
+    CSS gradient 
+    background 
+    pseudo-element 
+    selector lanjut 
+    webfont 
+    media queries 
+    transform (2D dan 3D)
+    CSS transtition 
+    CSS animation 
+    CSS Filter 
+    Flexbox 
+    CSS columns 
+
+
+Vendor prefixes 
+    -webkit-
+    -moz- 
+    -ie- 
+    -o- 
+
+
+tujuan :
+    menulis kode yang berjalan di gampr semua browser 

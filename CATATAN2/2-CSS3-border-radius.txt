@@ -1,0 +1,46 @@
+properti border radius 
+
+    ->  border-top-right-radius
+        border-top-left-radius
+        border-bottom-right-radius
+        border-bottom-left-radius
+
+penulisan singkat border-radius 
+
+    div {
+        border-radius: 0 50% 0 50%;
+    }
+
+    penulisan searah jarum jam 
+        atas kiri
+        atas kanan
+        bawah kanan
+        bawah kiri 
+
+
+cara membuat setengah lingkaran, buat kotak parent/luarnya dulu, setting height dan tingginya (misal width:150px height:150px), untuk membuat setengah set heightnya setengah dari height kotak parentnya, misal :
+
+    .kotak {
+        width: 150px;
+        height: 150px;
+        margin: 20px;
+        float: left;
+    }
+
+    .kotak4 {
+        border: 8px solid blue;
+        border-radius: 100px 100px 0 0;
+        height: 70px;
+    }
+
+    .kotak5 {
+        border: 8px solid blue;
+        height: 70px;
+        margin-top: 110px;
+        border-radius: 0 0 100px 100px;
+    }
+        
+    -> kotak4 untuk setengah lingkaran posisi di atas 
+    -> kotak5 untuk setengah linhkaran posisi di bawah 
+    
+    
