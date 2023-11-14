@@ -1,0 +1,41 @@
+# INTRO CSS 3
+
+CSS 3 dibagi menjadi beberapa modul, dan tiap-tiap modulnya menambahkan kemampuan / fitur yang ada di CSS2 
+
+
+kenapa CSS3?
+
+    - membuat website menjadi lebih fleksibel 
+    - membuat mock-up dengan cepat tanpa bantaun scripting 
+    - mengurangi penggunaan gmbar = kecepatan load halaman 
+    - penggunaan selector untuk menghindari penggunaan makrup yang boros 
+
+Sebelum CSS3 
+
+    banyak menggunakan gmbar untuk style kotak
+
+Dengan CSS 3
+
+    misal membuat garis lengkung di sebuah kotak, kita bisa menggunakan properti 
+
+    div {
+        width: 400px;
+        height: 300px;
+        background-color: purple;
+        border-radius: 30px;
+    }
+
+
+Properti CSS 3
+
+    webnya :
+
+    http://www.quackit.com/css/css3/properties
+
+
+yang sering dipakai 
+
+    border-radius 
+    opacity 
+    RGBa & HSLa 
+    box-sizing 
