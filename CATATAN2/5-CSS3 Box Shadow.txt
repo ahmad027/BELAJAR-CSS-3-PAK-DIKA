@@ -1,0 +1,36 @@
+Box Shadow 
+    -> urutan properti BOx Shadow 
+    1. <x-offset> 2. <y-offset> 3. <blur> 4. <spread> 5. <color> 
+
+    1. X-offset -> untuk mengatur jarak bayangan secara horizontal.
+    nilai positif ke kanan elemen, nilai negatif ke kiri elemen.
+
+    2. Y-offset, untuk mengatur jarak bayangan secara vertikal terhadap elemen. Nilai positif bayangan terletak di bawah elemen, nilainegatif bayangan terletak di atas elemen.
+
+    3. blur -> untuk menentukan tingkat blur bayangan 
+
+    4. spread -> untuk menentukan size atau ukuran dari bayangan. nilai positif ukuran bayngan semakin membesar dari ukuran elemen sebenarnya, sebaliknya nilai negatif ukuran bayangan diperkecil dari ukuran elemen sebenarnya. 
+
+    5. color -> warna untuk bayangan elemen
+
+
+    Opsional -> <inset> diletakkan paling depan sebelum x-offset 
+    -> digunakan untuk membuat bayangan di dalam box.
+
+
+Multiple Shadow 
+    -> untuk menambahkan lebih dari satu bayangan bisa menambahkan koma (,) setelah bayangan pertama.  
+
+    div {
+       box-shadow: 0px 0px 0px 5px rgba(255, 0, 0, 0.75), 0 0 0 10px blue, 0 0 0 15px yellow, 0 0 0 20px green;
+       border-radius: 50%;
+    }
+
+    contoh diatas membuat 4 tumpukan warna bayngan yang berbeda dan di bentuk lingkaran. 
+
+
+
+
+
+Web penjelasan Box-Shadow
+    -> https://www.w3schools.com/css/css3_shadows_box.asp
