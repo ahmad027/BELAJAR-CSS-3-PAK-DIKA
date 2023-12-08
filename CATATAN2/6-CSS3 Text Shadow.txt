@@ -1,0 +1,10 @@
+# CSS3 Text Shadow
+
+Ada 4 elemen seperti pada box shadow,
+    <x-offset>, <y-offset>, <blur> , <color> 
+
+
+Contoh penggunaan text shadow ada di link di bawah 
+
+https://codepen.io/sandhikagalih/pen/YWyjjP
+

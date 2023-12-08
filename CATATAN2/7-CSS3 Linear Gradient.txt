@@ -1,0 +1,84 @@
+# Linear Gradient
+
+Gradient @ teknik untuk memberikan warna gradasi pada elemen yang kita punya
+
+Ada 2 tipe Gradient,
+    - linear Gradient
+        memberikan gradasi warna secara garis lurus
+    - radial gradient 
+        memberikan gradasi warna secara melingkar 
+
+Linear Gradient bukan properti css3, melainkan value untuk background-image 
+
+penulisan paling sederhana sebagai berikut
+
+    background-image: linear-gradient(<warna awal>, <warna akhir>);
+
+    div {
+        background-image: linear-gradient(red, green)
+    }
+
+    -> linear-gradient(warna awal, warna akhir)
+
+
+bisa langsung ditulis background saja, contoh 
+
+    div {
+        background: linear-gradient(red, green);
+    }
+
+Kalau lebih dari dua warna cukup tambahkan koma, dan warna sebelum atau setelah warna kedua. Contoh :
+
+     div {
+        background: linear-gradient(red, #f0d606, green);
+    }
+
+     background-image: linear-gradient(<warna awal>, <warna tengah> ,  <warna akhir>);
+
+
+     background-image: linear-gradient(<warna awal>, <warna kedua> , <warna ketiga> ,   <warna akhir>);
+
+multiple color, penulisannya sbagai berikut 
+    div {
+        background: linear-gradient(<warna-1> , <warna-2>, .... , <warna-n>);
+    }
+
+Sintaks lengkap penulisannnya sebagai berikut :
+
+    div {
+        background: linear-gradient(<sudut> | <arah> , <warna awal> , <warna akhir> );
+    }
+
+
+pemberian nilai Arah pada gradient
+
+    - to bottom -> yang di bawah warna terakhir
+    - to top ->  yang di atas warna terakhir
+    - to left ->  yang di kiri warna terakhir
+    - to right ->  yang di kanan warna terakhir
+
+    atau diagonal 
+
+    - to left top 
+    - to left bottom 
+    - to right top 
+    - to right bottom 
+
+
+Color Stop 
+    -> untuk mengatur banyaknya color yang ingin di lebih ditonjolkan / tidak seimbang 
+
+    div {
+        background: linear-gradient(to right, red 63%, green 80%);
+    }
+
+     div {
+        background: linear-gradient(<sudut> | <arah> , <warna awal color stop> , <warna akhir color stop> );
+    }
+
+
+
+    
+
+     
+

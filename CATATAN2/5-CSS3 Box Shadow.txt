@@ -1,6 +1,6 @@
 Box Shadow 
     -> urutan properti BOx Shadow 
-    1. <x-offset> 2. <y-offset> 3. <blur> 4. <spread> 5. <color> 
+    1. <x-offset> wajib 2. <y-offset> wajib 3. <blur> 4. <spread> 5. <color> 
 
     1. X-offset -> untuk mengatur jarak bayangan secara horizontal.
     nilai positif ke kanan elemen, nilai negatif ke kiri elemen.
@@ -16,6 +16,30 @@ Box Shadow
 
     Opsional -> <inset> diletakkan paling depan sebelum x-offset 
     -> digunakan untuk membuat bayangan di dalam box.
+
+
+Penulisan box-shadow (minimal dua elemen)
+    - 2 elemen, apabila mau slah satu tidak ada nilainya ditulis dengan 0 saja bisa
+    <x (horizontal)> dan <y (vertikal)> 
+    div {
+        box-shadow: 10px 10px;
+    }
+
+    - 3 elemen 
+    <x (horizontal)> , <y (vertikal)>, <color>
+    div {
+        box-shadow: 10px 10px lightblue;
+    }
+
+    - 4 elemen 
+    <x (horizontal)> , <y (vertikal)>,<blur>, dan <color>
+    div {
+        box-shadow: 10px 10px 5px lightblue;
+    }
+
+    - 5 elemen 
+   <x (horizontal)> , <y (vertikal)>,<blur>, <spread>, dan <color>
+
 
 
 Multiple Shadow 

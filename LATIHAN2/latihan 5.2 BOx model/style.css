@@ -1,0 +1,15 @@
+div {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #39b54a;
+  box-shadow: 0px 0px 0px 5px red, 0px 0px 0px 10px blue,
+    0px 0px 0px 15px yellow, 0px 0px 0px 20px green;
+  margin: 50px auto;
+  transition: 0.3s;
+}
+
+div:hover {
+  box-shadow: 0px 80px 10px -40px rgba(0, 0, 0, 0.15);
+  margin-top: 40px;
+}
