@@ -1,0 +1,60 @@
+#CSS3 Font-face 
+
+    -> untuk mengelola font pada css 
+
+pada font-family, misal ;
+
+    font-family: "Arial Narrow", arial, sans-serif
+
+    arial dan sans-serif @ fallback (cadangan), apabila Arial Narrow tidak ditemukan pada siostem user maka arial yang digunakan, apabila arial tidak ditemukan maka sans-serif yang digunakan. Bisa juga karena typo, maka font selanjutnya yang diimplementasikan. 
+
+    font harus ada di sistem operasi client/ user.
+
+
+Agar tidak terjadinya kendala pada font yang terintall di user, kita bisa gunakan google font.
+
+    -> https://www.fonts.google.com 
+
+Jika google font tidak cukup, maka kita bisa menggunakan @font-face 
+
+
+Sintaks lengkap 
+
+    @font-face {
+        font-family: 'namaFontBaru';
+        src: url('lokasi/file/fontBaru.eot');
+        src: url('lokasi/file/fontBaru.eot?#iefix') format('embedded-opentype');
+        src: url('lokasi/file/fontBaru.woff2') format('woff2');
+        src: url('lokasi/file/fontBaru.woff') format('woff');
+        src: url('lokasi/file/fontBaru.ttf') format('truetype');
+        src: url('lokasi/file/fontBaru.svg#svgFontName') format('svg');
+    }
+
+    tergantung file yang dipunyai
+
+
+Layan web penyedia Font
+
+    - fonts.google.com 
+    - fontsquirrel.com 
+    - fontspring.com 
+    - webtype.com 
+    - typotheque.com 
+    - dll
+
+
+    -> pada squirrel.com ada 4 kompability font, desin , web, tablet dan mobile. Untuk menggunakannya harus download dulu, lalu diletakkan pada folder projek web kita. 
+
+    misal penulisan sintaks seperti di bawah ini :
+
+
+    @font-face {
+        font-family: 'Alex Brush';
+        src: url('./AlexBrush-Regular.ttf') format('truetype');
+    }
+
+    -> font-family sebaiknya dibuat nama sesuai
+    -> src: url, ditulis sesuai dengan tempat file font yang disimpan tadi 
+    -> jangan lupa formatnya, karena format font adalah .ttf maka menggunakan format('truetype'); 
+
+

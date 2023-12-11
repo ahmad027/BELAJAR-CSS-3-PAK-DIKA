@@ -1,0 +1,108 @@
+# Radial Gradient
+
+Radial Gradient bukan properti css3, melainkan value untuk background-image 
+
+penulisan paling sederhana sebagai berikut
+
+    background-image: radial-gradient(<warna awal>, <warna akhir>);
+
+    <warna awal> sebagai pusat lingkaran
+
+    div {
+        background-image: radial-gradient(red, green)
+    }
+
+    -> radial-gradient(warna awal, warna akhir)
+
+
+bisa langsung ditulis background saja, contoh 
+
+    div {
+        background: radial-gradient(red, green);
+    }
+
+multiple color, penulisannya sbagai berikut 
+    div {
+        background: radial-gradient(<warna-1> , <warna-2>, .... , <warna-n>);
+    }
+
+
+
+Color Stop 
+    -> untuk mengatur banyaknya color yang ingin di lebih ditonjolkan / tidak seimbang 
+
+    div {
+        background: radial-gradient(red 63%, green 80%);
+    }
+
+     div {
+        background: radial-gradient( <warna awal color stop> , <warna akhir color stop> );
+    }
+
+
+Sintaks lengkap penulisannnya sebagai berikut :
+
+    div {
+        background: radial-gradient(<tipe> <jangkauan> at <posisi y> <posisi x> ,  <warna-1> , <warna-2> , .... ,<warna-n> );
+    }
+
+
+   
+
+    bisa hanya mencatumkan tipe atau jangkauan saja, jadi bersifat opsional. 
+
+     -> tipe ada 2:
+        - ellips (default)
+        - circle 
+
+    Kalau tipe tidak dicantumkan, default radial menjadi ellips 
+
+    -> jangkauan
+    jarak dari pusat gradient ke sisi terluarnya.
+
+    - closest-corner 
+    jarak dari pusat gradient ke sudut terdekat elemen
+
+    - closest-side 
+    jarak dari pusat gradient ke sisi terdekat elemen
+
+    - farthest-corner
+     jarak dari pusat gradient ke sudut terjauh elemen
+
+    - farthest-side 
+     jarak dari pusat gradient ke sisi terjauh elemen
+
+
+    -> corner adalah sudut, misal kotak maka default sudut terdekat = sudut terjauh
+    -> side adalah sisi, secara default sisi terdekat adalah pusat gradient ke atas (kotak persegi panjang horizontal), sisi terjauhnya adalah pusat gradient dengan sisi sampingnya 
+
+
+    contoh untuk closest-side
+
+    div { 
+        background: radial-gradient(circle closest-side, red, blue)
+    }
+
+    -> gradasi warnanya hanya sampai sisi terdekat saja (atasnya, misal persegi panjang horizontal)
+
+posisi
+    posisi-y 
+        - top
+        - center 
+        - bottom
+        - px
+
+    posisi-x 
+        - left 
+        - center 
+        - right 
+        - px
+
+
+    contoh penggunaanya seperti dibawah ini;
+
+    div {
+        background: radial-gradient(circle farthest-side at top left, red, blue);
+    }
+
+    posisi berada pada sumbu y -> top (atas) dan sumbu x -> left (kiri)
