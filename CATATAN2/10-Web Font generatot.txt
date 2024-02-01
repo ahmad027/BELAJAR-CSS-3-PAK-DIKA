@@ -1,0 +1,56 @@
+#10 - Web Font Generatofa-rotate-180
+
+Pertama masuk web 
+
+fontsquirrel.com, -> pilih font yang diinginkan -> klik font itu 
+                -> selanjutnya pilih tab Webfont kit
+                -> pilih yang format WOFF
+                -> klik tombol Download @font-face kit
+                -> ekstrak foldernya, dan masuk pada folder web font
+                -> misal menginginkan yang regular, masuk pada folder regular
+                -> cari file yang berektensi .woff
+                -> copy file tersebut dan paste pada project 
+                -> pada folder nama font yanmg dipilih (misal regular), maka otomatis ada file stylesheet.css nya yang bisa kita copy dan digunkan pada project 
+                -> 
+
+WOFF - Recommended, works in all modern browsers
+TTF - Not recommended, replaced by WOFF
+EOT - Not recommended, only necessary for IE older than IE9
+SVG - No longer supported or required for any browser
+
+
+    WOFF / WOFF2
+        -> Web Open File format
+        -> Dikembangkan oleh mozilla
+        -> DIbuat khusus untuk website 
+        -> Di-load lebih cepat daripada jenis font yang lain 
+        -> Merupakan kompresi dari tipe TTF / OTF 
+
+
+Web Font Generator 
+    -> pada home fontsquirrel.com pilih "Webfont Generator"
+    -> klik upload font 
+    -> arahkan file yang diinginkan (misal file dengan ektensi .ttf)
+    -> pilih yang optimal
+    -> centang pada agreement
+    -> klik download your kit 
+    -> ekstrak zip hasil download
+    -> otomatis ada file yang bertensi .woff dan .woff2 
+    -> copy file yang berktensi .woff dan .woff2, paste di project 
+    -> hasil file ektrak tadi juga terdapat srylesheet.css untuk style css yang bisa di copy 
+    -> Paste di stylecss project
+    -> jangan lupa menambah font-family sesuai yang dipaste kan, contoh 
+
+
+        @font-face {
+            font-family: 'open_sansregular';
+            src: url('OpenSans-Regular-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            }
+
+        h2 {
+            font-size: 100px;
+            text-align: center;
+            font-family: 'alex_brushregular';
+        }

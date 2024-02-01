@@ -43,7 +43,7 @@ Layan web penyedia Font
     - dll
 
 
-    -> pada squirrel.com ada 4 kompability font, desin , web, tablet dan mobile. Untuk menggunakannya harus download dulu, lalu diletakkan pada folder projek web kita. 
+    -> pada fontsquirrel.com ada 4 kompability font, desin , web, tablet dan mobile. Untuk menggunakannya harus download dulu, lalu diletakkan pada folder projek web kita. 
 
     misal penulisan sintaks seperti di bawah ini :
 
