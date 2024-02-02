@@ -1,0 +1,75 @@
+#11- Vendor Prefix 
+
+    sintaks khusus yang harus ditambahkan untuk beberapa property CSS3 
+
+    sintaks spesifik untuk tiap browser / vendor 
+
+Prefix / awalan 
+
+    vendor prefix 
+
+    contoh 
+    -webkit-<properti-cs3>
+    -moz-<properti-cs3>
+    -ms-<properti-cs3>
+    -o-<properti-cs3>
+
+    Karena tidak semua browser support CSS3 <tergantung zaman>
+
+    -> -webkit- (Chrome, Safari, Opera versi terbaru)
+    -> -moz- (firefox)
+    -> ms- (Internet Explorer)
+    -> -o- (Opera versi terdahulu)
+
+Vendor prefix digunakan untuk membantu css3 bisa digunakan di platform2 di atas, 
+
+
+    contoh 
+
+    img {
+            filter: grayscale(50%);
+        }
+
+
+    misal properties di atas tidak bisa digunakan pada chrome, maka harus menggunakan vendor prefix.
+
+    contoh 
+
+    img {
+        -webkit-filter: grayscale(50%);
+        filter: grayscale(50%);
+    }
+
+
+    Property CSS3 yang butuh vendor prefixes (bisa juga sudah diupdate)
+
+   -> bisa cek di website shouldiprefix.com
+
+    -> warna hijau tidak butuh prefix 
+    -> warna biru WAJIB butuh prefix 
+
+    di website tersebut tertera cara penulisannya.
+
+   -> bisa juga cek di caniuse.com 
+
+    caranya ketik property CSS3 di kolom filter 
+
+    -> warna merah tidak support property CSS3 tersebut 
+    -> warna hijau muda partial support
+    -> warna hijau terang support penuh
+    -> warna hijau dengan strip, harus menggunakan webkit
+
+
+   -> bisa juga mengecek melalui website https://pleeease.iamvdo.me/play
+
+    -> caranya ketik misal 
+        img {
+            filter:   -> otomatis ada penulisannya
+        }
+
+    -> bisa juga langsung copy css project di web, otomatis nanti ada saran pengetikan yang sesuai 
+
+
+    -> bisa juga menggunakan "emmet"
+
+        caranya ketik property yang diinginkan, cari yang -webkit- baru di tab
