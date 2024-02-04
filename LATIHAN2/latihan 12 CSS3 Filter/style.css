@@ -1,0 +1,71 @@
+body {
+  text-align: center;
+}
+
+h1 {
+  filter: drop-shadow(5px 5px 5px yellow);
+}
+
+img {
+  width: 25%;
+  height: 25%;
+}
+
+.logo {
+  filter: drop-shadow(5px 5px 5px black);
+}
+
+.logo:hover {
+  filter: drop-shadow(5px 5px 5px yellow);
+}
+
+.gambar1 {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+
+.gambar2 {
+  filter: brightness(50%);
+}
+
+.gambar3 {
+  filter: contrast(150%);
+}
+
+.gambar4 {
+  filter: saturate(25%);
+}
+
+.gambar4:hover {
+  filter: saturate(100%);
+  transition: 1s;
+}
+
+.gambar5 {
+  filter: grayscale(100%);
+}
+
+.gambar6 {
+  filter: sepia(150%);
+}
+
+.gambar7 {
+  filter: hue-rotate(100deg);
+}
+
+.gambar8 {
+  filter: invert(75%);
+}
+
+.gambar9 {
+  filter: opacity(0.8);
+}
+
+.gambar10 {
+  filter: blur(2px) grayscale(100%);
+}
+
+.gambar10:hover {
+  filter: blur(0) grayscale(0);
+  transition: 1s;
+}

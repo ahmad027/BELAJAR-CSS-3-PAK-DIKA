@@ -1,0 +1,50 @@
+# CSS3 Filter 
+
+CSS3 Filter adalah properti yang digunakan untuk memberikan efek visual pada gambar, background atau border 
+
+Cara penulisannya, 
+
+    filter: <tipe-filter>;
+
+    filter termasuk properti yang membutuhkan vendor prefix (-webkit-filter) 
+
+Tipe filter 
+    blur
+    brightness 
+    contrast 
+    drop-shadow 
+        (drop-shadow css3 menggunkan kemmapuan browser, sedangkan   drop-shadow pada filter menggunakan hardware komputer kita)
+        drop-shadow lebih simple daripada box-shadow maupun text-shadow
+    grayscale -> abu2
+    hue-rotate -> rotasi roda warna
+    invert -> negatif film
+    opacity -> (opacity css3 menggunkan kemmapuan browser, sedangkan opacity pada filter menggunakan hardware komputer kita)
+    saturate -> warna
+    sepia -> agak kuning
+
+    contoh penulisan
+
+        blur(px)
+        brightness (angka | %) 
+        contrast (angka | %)
+        drop-shadow (sama seperti box-shadow)
+        grayscale (angka | %)
+        hue-rotate (deg)
+        invert (angka | %)
+        opacity (angka | %)
+        saturate (angka | %)
+        sepia (angka | %)
+
+
+    Efek2 di atas bisa ditumpuk jadi satu 
+
+        contoh 
+
+        .gambar10 {
+            filter: blur(2px) grayscale(100%);
+        }
+
+
+Untuk mencoba properti filter bisa menggunakan website 
+
+    https://github.khronos.org/siggraph2012course/CanvasCSSAndWebGL/demos/CSS_Filters.htm
