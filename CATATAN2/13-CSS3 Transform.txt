@@ -1,0 +1,80 @@
+#CSS3 Transform 
+
+properti transform memungkinkan kita dapat memanipulasi format visual dari elemen HTML 
+
+Tranformasi 2D dan 3D
+
+penulisannnya: 
+
+    transform: <fungsi>; 
+
+Fungsi Transformasi 
+
+    scale -> memperbesar / memperkecil 
+    rotate -> memutar 
+    skew -> membuat condong / miring 
+    translate -> mengubah posisi 
+
+Penulisan 
+
+    scale(angka), scaleX(angka), scaleY(angka)
+    rotate(deg), rotateX(deg), rotateY(deg)
+    skew(deg), skewX(deg), skewY(deg)
+    translate(px), translateX(px), translate(px)
+
+Untuk scale -> apabila penulisan 2 parameter langsung, misal 
+
+    scale(X,Y) -> maka sumbu bangun membesar atau mengecil secara sumbu X, dan juga scara sumbu Y 
+
+    bisa juga ditulis secara terpisah, misal 
+
+    transform: scaleX(2) scaleY(1.5);
+
+Untuk rotate -> kalau positif berputar searah jarum jam, kalau minus berputar melawan arah jarum jam 
+
+    penulisan sintaks, misal : 
+
+    transform: rotate(90deg); -> titik perputar di tengah bangun 
+    transform: rotateX(180deg); -> titik perputar di sumbu X bangun 
+    transform: rotateY(180deg); -> titik perputar di sumbu Y bangun 
+
+Penulisan properti tranform bisa ditumpuk, misal : 
+
+    transfrom: rotate(180deg) rotateX(180deg) rotateY(180deg); 
+
+Untuk skew -> defaultnya skewX
+
+    penulisan sintaks, misal : 
+
+    transform: skew(90deg); -> titik miring di sumbuX (default)
+    transform: skewX(180deg); -> titik miring di sumbu X bangun 
+    transform: skewY(180deg); -> titik miring di sumbu Y bangun 
+
+
+    kalau mau kebalikan dari sumbunya, tambahkan negatif pada deg-nya, misal 
+
+    transform: skew(-90deg);
+
+Untuk translate -> untuk mengubah posisi element 
+
+    penulisan sintaks, misal : 
+
+        transform: translate(90px); -> titik berpindah dari sumbuX (default)
+        transform: translateX(20px); -> titik berpindah dari sumbu X bangun 
+        transform: translateY(80px); -> titik berpindah dari sumbu Y bangun 
+
+    bisa ditumpuk penulisannya
+
+        transform: translate(20px, 10px);
+
+    kalau mau kebalikan dari sumbunya, tambahkan negatif pada angka-nya, misal 
+
+        transform: translate(-90px);
+
+
+Perbedaan penggunaan position: absolute (dkk pada css3) dengan penggunaan transfrom: translate (pada css3), adalah transform:translate menggunakan performa hardware, sedangkan position: absolute dkk menggunakan kemampuan browser. 
+
+
+untuk properti2 transform bisa ditumpuk, misal : 
+
+    transform: scale(3) rotate(180deg);
