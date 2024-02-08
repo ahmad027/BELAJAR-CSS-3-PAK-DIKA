@@ -1,0 +1,34 @@
+#CSS3 Transition Part 2
+
+    transtion: [property] <durasi> [fungsi] [delay];
+
+[fungsi] -> fungsi transisi / timing function 
+
+    pergerakan apa yng dilakukan dalam transisi 
+
+    timing function 
+
+        ease -> default 
+        ease-in 
+        ease-out 
+        ease-in-out 
+        linear 
+        cubic-bezier(w,x,y,z) -> untuk menentukan nilainya bisa menggunakan inspect element
+
+
+        cubic bezier digunakan untuk cepat lambatnya elemen berpindah dari lokasi awal ke lokasi akhir
+
+[delay] -> memberikan waktu tunggu sebelum kita menjalankan transisi 
+
+    delay -> s / ms (second atau milisecond)
+
+
+
+fungsi pada transisi  bisa ditumpuk, misal 
+
+    .kotak10 {
+        background-color: hotpink;
+        transition: margin-left 1s, transform 3s; -> tumpul margin dan transform
+    }
+
+

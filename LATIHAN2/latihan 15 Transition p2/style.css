@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1000px;
+  margin: 10px auto;
+  border: 5px solid black;
+}
+
+.kotak {
+  font-size: 15px;
+  text-align: center;
+  line-height: 100px;
+  margin: 20px;
+  width: 150px;
+  height: 100px;
+}
+
+.kotak1 {
+  background-color: salmon;
+  transition: all 3s ease;
+}
+
+.container:hover .kotak1 {
+  transform: rotate(720deg);
+  margin-left: 800px;
+  background-color: royalblue;
+}
+
+.kotak2 {
+  background-color: yellow;
+  transition: all 3s ease-in;
+}
+
+.container:hover .kotak2 {
+  transform: rotate(720deg);
+  margin-left: 800px;
+  background-color: greenyellow;
+}
+
+.kotak3 {
+  background-color: darkcyan;
+  transition: all 3s ease-out;
+}
+
+.container:hover .kotak3 {
+  transform: rotate(720deg);
+  margin-left: 800px;
+  background-color: darkgreen;
+}
+
+.kotak4 {
+  background-color: chartreuse;
+  transition: all 3s ease-in-out;
+}
+
+.container:hover .kotak4 {
+  transform: rotate(720deg);
+  margin-left: 800px;
+  background-color: green;
+}
+
+.kotak5 {
+  background-color: aqua;
+  transition: all 3s linear;
+}
+
+.container:hover .kotak5 {
+  transform: rotate(720deg);
+  margin-left: 800px;
+  background-color: aquamarine;
+}
+
+.kotak6 {
+  background-color: red;
+  transition: all 3s cubic-bezier(0.05, 0.74, 0.06, 0.76);
+}
+
+.container:hover .kotak6 {
+  transform: rotate(720deg);
+  margin-left: 800px;
+  background-color: rebeccapurple;
+}
+
+.kotak7 {
+  background-color: fuchsia;
+  transition: all 3s 2s;
+}
+
+.container:hover .kotak7 {
+  transform: rotate(720deg);
+  margin-left: 800px;
+  background-color: purple;
+}
+
+.kotak8 {
+  background-color: gray;
+  transition: transform 3s;
+}
+
+.container:hover .kotak8 {
+  transform: rotate(720deg);
+  margin-left: 800px;
+  background-color: grey;
+}
+
+.kotak9 {
+  background-color: gold;
+  transition: all 3s 2s;
+}
+
+.container:hover .kotak9 {
+  transform: rotate(720deg);
+  margin-left: 800px;
+  background-color: goldenrod;
+}
+
+.kotak10 {
+  background-color: hotpink;
+  transition: margin-left 3s, transform 3s 2s;
+}
+
+.container:hover .kotak10 {
+  transform: rotate(720deg);
+  margin-left: 800px;
+  background-color: pink;
+}
