@@ -1,0 +1,84 @@
+#14 CSS3 Transition 
+
+Transition -> memungkinkan kita dapat mengubah nilai dari property HTML secara halus 
+
+Perbedaan Transition dan Animation 
+
+    Transition -> ada keadaan awal dan keadaan akhir 
+    Animation -> ada keadaan awal dan keadaan akhir, dengan beberapa keadaan diantara keadaan awal dan akhir (keyframe)
+
+penulisan Transition 
+
+    transition: [property] <durasi> [fungsi] [delay];
+
+    hanya <durasi> yang wajib, selain itu opsioanal
+
+    durasi mempunyai satuan s /ms (second / mili second)
+
+    transition sebaiknya di taruh di keadaan awal 
+
+    misal 
+
+        .kotak1 {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            transition: 1s; -> ditaruh di keadaan awal 
+        }
+
+        .kotak1:hover {
+            transform: rotate(180deg);
+        }
+
+
+[property] -> all (default-nya), tidak ditulis bisa saja 
+           -> property lain yang diatur di keadaan akhir 
+
+               misal 
+
+               .kotak3 {
+                    width: 100px;
+                    height: 100px;
+                    background-color: aqua;
+                    transition: margin-left 1s; -> saat hover yang digunakan cuman margin-left saja, kalau (all) menrapkan semuanya
+                }
+
+                    .container:hover .kotak3 {
+                    transform: rotate(720deg);
+                    margin-left: 800px;
+                    background-color: yellow;
+                 }
+
+
+    [property]
+
+        all
+        [nama property]
+        none 
+
+
+Animatible properties 
+    background-color 
+    background-position 
+    background-size 
+    border 
+    color 
+    filter 
+    font-size 
+    line-height 
+    top left bottom right 
+    margin padding 
+    width height 
+    opacity 
+    transform 
+    word-spacing 
+    letter-spacing 
+    .....
+
+    
+Non-animatible properties 
+
+    font-family 
+    display 
+    position 
+    .....
