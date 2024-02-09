@@ -1,0 +1,69 @@
+#CSS3 Animasi
+
+Properti animation -> properti untuk mengubah keadaan awal dan akhir, antara keduanya ada 1 keyframe atau lebih. 
+
+Sintaknya 
+
+    @keyframes [names] {
+        from {
+            [property-css]
+        }
+
+        to {
+            [property-css]
+        }
+    }
+
+    -> property animation di letakkan di keadaan akhir
+
+    -> Jika hanya ada 1 keadaan awal dan keadaan akhir, bisa menggunakan from {} to {}, bisa juga menggunakan 0% {} 100% {}
+
+    -> perbedaan dengan transition, kalau transition tidak kembali ke keadaan awal, sedangkan pada animation kembali ke keadaan awal.
+
+    -> properti animation bisa juga diletakkan di keadaan awal, sehingga animasi akan dilakukan saat refresh halaman, kalau diletakkan di keadaan akhir (misal di taruh di hover) maka animasi akan bekerja di keadaan akhir
+
+
+
+Nilai2 yang bisa diterapkan pada propert animation 
+
+    [name] -> wajib ada, nama harus sama saat pemanggilan di property css
+    [duration]
+    [timing-function]
+    [delay]
+    [iteration-count] -> <angka> | infinite ( jumlah pengulangan animasi), defaultnya 1
+    [direction]
+    [fill-mode]
+    [play-state]
+
+    fungsi2 di atas bila ditulis satu baris disebut sharthand, bisa juga di tulis satu2
+
+    misal shorthand 
+
+        animation: animasiKotak 2s ease-in 2;
+        property animation: [name] [duration] [timing-function] [iteration-count]
+
+    misal ditulis satu-satu 
+
+        animation-name: animasiKotak1;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+
+Nilai-nilai [direction]
+
+    normal -> default 
+    reverse -> dari akhir ke keadaan awal (terbalik)
+    alternate -> bolak-balik dari awal ke akhir
+    alternate-reverse -> bolak - balik dari akhir ke awal 
+
+Nilai-nilai pada [fill-mode] -> akhir transisi
+
+    none 
+    forwards -> berhenti di keadaan akhir
+    backwards 
+    both 
+
+Nilai2 [play-state]
+
+    running -> berjalan (default) 
+    paused  -> biasa digunakan dengan javascript 

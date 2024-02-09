@@ -1,0 +1,87 @@
+.container {
+  text-align: center;
+  line-height: 200px;
+  font-size: 15px;
+  font-weight: bolder;
+  color: black;
+  text-shadow: 1px 2px 0 white;
+}
+
+.kotak {
+  width: 200px;
+  height: 200px;
+  background-color: salmon;
+  animation: animasiKotak 2s ease-in;
+  margin: 20px;
+}
+
+.kotak1 {
+  width: 200px;
+  height: 200px;
+  background-color: blueviolet;
+  animation: animasiKotak 2s ease-in 2;
+  margin: 20px;
+}
+
+.kotak2 {
+  width: 200px;
+  height: 200px;
+  background-color: chocolate;
+  animation: animasiKotak 2s ease-in 2 reverse;
+  margin: 20px;
+}
+
+.kotak3 {
+  width: 200px;
+  height: 200px;
+  background-color: darkcyan;
+  animation: animasiKotak 2s ease-in 3 alternate;
+  margin: 20px;
+}
+
+.kotak4 {
+  width: 200px;
+  height: 200px;
+  background-color: fuchsia;
+  animation: animasiKotak 2s ease-in 4 alternate-reverse;
+  margin: 20px;
+}
+
+.kotak5 {
+  width: 200px;
+  height: 200px;
+  background-color: greenyellow;
+  animation: animasiKotak 2s ease-in 3 alternate forwards;
+  margin: 20px;
+}
+
+.kotak6 {
+  width: 200px;
+  height: 200px;
+  background-color: hotpink;
+  animation: animasiKotak 2s ease-in 3 alternate forwards running;
+  margin: 20px;
+}
+
+.kotak7 {
+  width: 200px;
+  height: 200px;
+  background-color: khaki;
+  animation: animasiKotak 2s ease-in 3 alternate forwards running;
+  margin: 20px;
+}
+
+@keyframes animasiKotak {
+  0% {
+    width: 200px;
+  }
+
+  50% {
+    width: 500px;
+  }
+
+  100% {
+    width: 500px;
+    height: 300px;
+  }
+}
