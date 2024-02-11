@@ -1,0 +1,250 @@
+# 17 - Praktek membuat galeri foto lightbox dengan CSS3 
+
+Lightbox secara mudahnya, saat foto diklik foto tersebut membesar dan ada deskripsi dan lainnya 
+
+    -> penulisan @font-face, seperti dibawah ini :
+
+        @font-face {
+            font-family: 'BebasNeue';
+            src: url(../fonts/bebasneue-regular.woff) format('woff');
+            }
+
+    -> shorthand font pada css, sebagai berikut 
+
+        font: ukuran/lineheight "nama font utama" , "nama font alternatif"
+        font: 18px/36px 'BebasNeue', 'Arial Narrow', arial, sans-serif;
+
+
+    -> margin
+        auto
+            bisa digunakan untuk menyetting margin-left dan margin-right saja, apbila right saja, elemen terletak di posisi paling kanan sebaliknya juga margin-left terletak di posisi paling kiri. Apabila margin-right dan margin-left ditentukan auto semua posisi elemen berada di tengah secara horizontal
+
+
+            bila ditentukan margin auto saja, elemen terletak di tengah secara horizontal
+
+            div {
+                margin: auto; // berarti elemen berada di tengah secara horizontal
+            }
+
+        Shorthand margin
+
+
+            -> penulisan text-shadow 
+
+                Ada 4 elemen seperti pada box shadow,
+                <x-offset>, <y-offset>, <blur> , <color> 
+
+                contoh : 
+
+                text-shadow: 2px 2px 1px white;
+
+            -> penulisan box-shadow 
+
+                    Penulisan box-shadow (minimal dua elemen)
+                        - 2 elemen, apabila mau slah satu tidak ada nilainya ditulis dengan 0 saja bisa
+                        <x (horizontal)> dan <y (vertikal)> 
+                        div {
+                            box-shadow: 10px 10px;
+                        }
+
+                        - 3 elemen 
+                        <x (horizontal)> , <y (vertikal)>, <color>
+                        div {
+                            box-shadow: 10px 10px lightblue;
+                        }
+
+                        - 4 elemen 
+                        <x (horizontal)> , <y (vertikal)>,<blur>, dan <color>
+                        div {
+                            box-shadow: 10px 10px 5px lightblue;
+                        }
+
+                        - 5 elemen 
+                    <x (horizontal)> , <y (vertikal)>,<blur>, <spread>, dan <color>
+
+
+    
+    -> <li> defaultnya adalah block 
+
+    -> ada 3 nilai dalam border misal
+
+        div {
+            border: 5px solid black;
+                    tebal border, style border, dan warna border
+        }
+
+        border: width style color;
+
+
+        ada 5 style pada border 
+            solid = utuh 
+            dotted = titik-titik
+            dashed = garis-garis 
+            double = doble 
+            none = tdk ada garis 
+
+    -> apabila sudah mengatur border radius tidak ngefek, coba tambahi overflow:hidden, contoh 
+
+        .gallery li {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; -> pertama tidak bekerja
+            overflow: hidden; -> ditambahi langsunmg bisa
+            border: 5px solid #666;
+            }
+
+    -> apabila ditambah gambar, terletak di bawahnya dan mau diletakkan di sebelah kanannya, menggunakan properti float: left;
+
+     contoh 
+
+        .gallery li {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #666;
+            float: left; -> gambar terletak di sebelah kanan gambar pertama, tapi containernya runtuh 
+            }
+
+    -> untuk mengatasi container runtuh, bisa menggunakan clear: both;
+
+        caranya menambahkan <div class="clear"></div>, pada akhir ul (atau bagian yang bermaslah), dan menuliskan pada css
+
+        .clear {
+            clear: both;
+        }
+
+    -> span, default displaynya dalah inline 
+
+        untuk mengatur ukuran harus diubah displaynya menjadi block 
+
+        .gallery li span {
+            display: block;
+            width: 120px;
+            height: 120px;
+            background-color: rgba(200, 200, 200, 0.5);
+            }
+
+        setelah menulis code tersebut, perubahan belum terjadi, karena efek overflow:hidden
+
+        solusinya, menonaktifkan sementara oferflow:hidden nya 
+
+    -> untuk membuat span di atas image, maka kita menggunakan properti position: absoulte 
+
+        .gallery li span {
+            display: block;
+            width: 120px;
+            height: 120px;
+            background-color: rgba(200, 200, 200, 0.5);
+            position: absolute; -> agar posisinya bisa di atas gambar
+            top: 0; -> posisinya di atur ke atas
+            }
+
+    -> terjadi span di atas banget, karena parentnya (li) belum di tambah position:relative 
+
+        .gallery li {
+            width: 120px;
+            height: 120px;
+            /* overflow: hidden; */
+            border: 5px solid #666;
+            float: left;
+            margin-right: 10px;
+            position: relative; -> agar span tadi bisa terletak dia tas gambar, parent nya adalah <li>
+            }
+
+    -> untuk mengatur span bisa teletak di tengah2 gmbar, kita menggunakan text-align: center; dan mengatur lineheight sesuai dengan height span tersebut 
+
+        .gallery li span {
+            display: block;
+            width: 120px;
+            height: 120px;
+            background-color: rgba(200, 200, 200, 0.5);
+            position: absolute;
+            top: 0;
+            text-align: center; -> tulisan di tengah secara horizontal
+            line-height: 120px; -> tulisan di tengah secara vertikal
+        }
+
+    -> untuk memanipulasi agar tulisan hilang sementara, bisa menambah property opacity: 0;
+
+        .gallery li span {
+            display: block;
+            width: 120px;
+            height: 120px;
+            background-color: rgba(200, 200, 200, 0.5);
+            position: absolute;
+            top: 0;
+            text-align: center;
+            line-height: 120px;
+            color: #333;
+            text-shadow: 1px 1px 1px #ddd; -> agar lebih mempercantik teks
+            opacity: 0; -> agar span tidak terlihat sementara
+        }
+
+    -> memperlihatkan lagi span saat di hover, caranya menambah li a: hover span {}
+
+        .gallery li a:hover span {
+            opacity: 1;
+        }
+
+    -> untuk membuat ada efek transisi saat dihover, tmbahkan transition: 0.3s (agar transisi terlihat natural)
+
+        .gallery li span {
+            display: block;
+            width: 120px;
+            height: 120px;
+            background-color: rgba(200, 200, 200, 0.5);
+            position: absolute;
+            top: 0;
+            text-align: center;
+            line-height: 120px;
+            color: #333;
+            text-shadow: 1px 1px 1px #ddd;
+            opacity: 0;
+            transition: 0.3s; -> transisi terlihat natural
+           }
+
+
+    -> untuk menambah efek transform, bisa mengatur efek transform di kondisi awal dan akhir span 
+
+        kondisi awal pada span 
+
+            .gallery li span {
+                display: block;
+                width: 120px;
+                height: 120px;
+                background-color: rgba(200, 200, 200, 0.5);
+                position: absolute;
+                top: 0;
+                text-align: center;
+                line-height: 120px;
+                color: #333;
+                text-shadow: 1px 1px 1px #ddd;
+                opacity: 0;
+                transition: 0.3s;
+                transform: scale(0) rotate(0); -> kondisi awal transform: scale 0 (tdk ada ukuran) rotate 0 (tdk ada putaran)
+                }
+
+        kondisi akhir span 
+
+            .gallery li a:hover span {
+                opacity: 1;
+                transform: scale(1) rotate(360deg); -> transform menjadi scale 1(ukuran normal) dan rotate 360deg (berotasi satu putaran)
+            }
+
+
+    -> untuk merapikan margin pada samping kiri dan kanan gambar, mengubah margin rightnya m3njadi 20px pada .galley li {} 
+
+        .gallery li {
+            width: 120px;
+            height: 120px;
+            /* overflow: hidden; */
+            border: 5px solid #666;
+            float: left;
+            margin-right: 20px;
+            position: relative;
+        }
+
+        
+
+
