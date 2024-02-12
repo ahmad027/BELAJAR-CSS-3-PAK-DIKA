@@ -1,0 +1,217 @@
+# 18 - Praktek membuat galeri foto dengan css part 2
+
+    -> untuk membuat overlay, harus menambahkan div.overlay pada setiap li 
+
+        <li>
+            <a href> ..... </a>
+            <div class= "overlay"> </div>
+        </li>
+
+    -> selanjutnya overlay di setting pada css, sebagai berikut :
+
+        .overlay {
+            position: fixed; -> agar posisi overlay tetap saat di scroll 
+            top: 0; -> top, left, bottom, right bernilai 0 (nol) agar overlay menutupi semua layar
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8); -> background berwarna hitam  dengan opacity 0.8
+        }
+
+    -> terjadi masalah overlaynya hanya menutupi satu gambar saja, maka ditambahi z-index seperti dibawah 
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 999; -> mengatur overlay agar bisa menutupi semua gambar (karena diletakkan di tas elemen gambar)
+        }
+
+    -> agar overlay muncul saat diklik saja, kita memanfaatkan css target. caranya tambahkan misal #gambar 1 pada <a href=""> dan menambahkan id pada div.overlay, sekaligus memindah bottom dan right pada css overlay target , contoh 
+
+        <a href="#gambar1">
+
+        <div class="overlay" id="gambar1"></div>
+
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 999;
+        }
+
+        .overlay:target {
+            bottom: 0;
+            right: 0;
+        }
+
+    -> jangan lupa menambahkan transisi agar lebih natural keluar overlaynya, caranya mengubah opacity pada css overlay menjadi 0, dan opacity pada css overlay:target menjadi 0.8, sekaligus menambahkan efek transition pada css overlay 
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0); -> ini yang diubah
+            z-index: 999;
+            transition: 0.8s; -> menambahkan efek transisi
+        }
+
+        .overlay:target {
+            bottom: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8); -> tambahan
+        }
+
+
+    -> menambahkan foto pada setiap div.overlay, 
+
+          <div class="overlay" id="gambar1">
+            <img src="./img/full/captA.png" alt="capt Amerika" />
+          </div>
+
+    -> maslaha terjadi, gambar langsung keluar sebelum overlay diklik, caranya menambahkan property css width: 0; height:0 dan overflow:hidden pada css overlay 
+
+        .overlay {
+            position: fixed;
+            width: 0; -> tambahan
+            height: 0; -> tambahan
+            overflow: hidden; -> tambahan
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0);
+            z-index: 999;
+            transition: 0.8s;
+        }   
+
+    -> pada css overlay:target kita menambahkan width: auto dan height: auto
+
+        .overlay:target {
+            width: auto; -> tambahan
+            height: auto; -> tambahan
+            bottom: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+    -> untuk mengatur gambar terletak di tengah, caranya menambahkan text-aligment: center dan padding: 100px 0; pada css overlay , sekaligus menambah css baru .overlay target, menambah max-height: 100% agar gambarnya besarnya mnyesuaikan tampilan browser 
+
+        .overlay {
+            position: fixed;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0);
+            z-index: 999;
+            transition: 0.8s;
+            text-align: center; -> tambahan
+            padding: 100px 0; -> tambahan
+        }
+
+        .overlay img {
+            max-height: 100%; -> agar tingg gambar menyesuaikan tinggi display browser
+        }
+
+    -> untuk mengatur ada efek drop-shadow pada ganbar tanbahkan css sebagai berikut 
+
+    .overlay img {
+        max-height: 100%;
+        filter: drop-shadow(3px 10px 4px white);
+    }
+
+    -> menambah animasi saat img diklik
+
+        @keyframes zoomDanFade {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .overlay:target img {
+            animation: zoomDanFade 1s;
+        }
+
+    -> menambah tombol close 
+
+         <div class="overlay" id="gambar1">
+            <a href="#" class="close">X close</a> -> tambahannya
+            <img src="./img/full/captA.png" alt="capt Amerika" />
+          </div>
+
+    -> mengatur tulisan close 
+
+        .overlay .close {
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            margin-left: -50px;
+            color: white;
+            text-decoration: none;
+            background-color: black;
+            border: 3px solid black;
+            line-height: 14px;
+            padding: 5px;
+        }
+
+
+    -> mengatur animasi close 
+
+        .overlay .close {
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            margin-left: -50px;
+            color: white;
+            text-decoration: none;
+            background-color: black;
+            border: 3px solid black;
+            line-height: 14px;
+            padding: 5px;
+            opacity: 0;
+        }
+
+        membuat keyframenya 
+
+            @keyframes slideDownFade {
+                0% {
+                    opacity: 0;
+                    margin-top: -20px; -> agar gambar dr atas ke bawah
+                }
+
+                100% {
+                    opacity: 1;
+                    margin-top: 0; -> agar gambar dr atas ke bawah
+                }
+            }
+
+            .overlay:target .close {
+                animation: slideDownFade 0.5s 0.5s forwards; 
+                            <namaKeyframe> <waktu> <delay> <agar tidak tetap di keadaan akhir>
+                }
+
+
+    -> copy satu div image pada li2 berikutnya 
+
+        <li>
+          <a href="#gambar1"
+            ><img src="./img/thumbs/captB.png" alt="thumbs capt" />
+            <span>Captain Amerika</span>
+          </a>
+
+          <div class="overlay" id="gambar1">
+            <a href="#" class="close">X close</a>
+            <img src="./img/full/captA.png" alt="capt Amerika" />
+          </div>
+        </li>
