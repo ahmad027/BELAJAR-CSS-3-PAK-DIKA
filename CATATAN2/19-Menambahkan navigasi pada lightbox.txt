@@ -1,0 +1,28 @@
+#19 Menambahkan navigasi psa lightbox 
+
+copy next dan prev png dan di paste pada folder img 
+
+
+    -> menulis css untuk tombol prev dan next 
+
+        .prev {
+            width: 57px;
+            height: 93px;
+            background-image: url(../img/prevBtn.png);
+            position: absolute;
+            text-indent: -9999px;
+            top: 35%;
+            margin-left: -80px;
+        }
+
+        .next {
+            width: 57px;
+            height: 93px;
+            background-image: url(../img/nextBtn.png);
+            position: absolute;
+            text-indent: -9999px;
+            top: 35%;
+            margin-left: 10px;
+        }
+
+    -> menambahkan a href next dan prev per gambar
