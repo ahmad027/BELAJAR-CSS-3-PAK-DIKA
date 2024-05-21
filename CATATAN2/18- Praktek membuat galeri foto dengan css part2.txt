@@ -74,7 +74,7 @@
             <img src="./img/full/captA.png" alt="capt Amerika" />
           </div>
 
-    -> maslaha terjadi, gambar langsung keluar sebelum overlay diklik, caranya menambahkan property css width: 0; height:0 dan overflow:hidden pada css overlay 
+    -> masalah terjadi, gambar langsung keluar sebelum overlay diklik, caranya menambahkan property css width: 0; height:0 dan overflow:hidden pada css overlay 
 
         .overlay {
             position: fixed;
